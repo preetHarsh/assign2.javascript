@@ -1,0 +1,76 @@
+/* body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* header */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+/* gallery */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* large image */
+figure {
+  flex: 1 1 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+img {
+  display: block;
+}
+
+figure img {
+  max-width: 100%;
+  border: 4px solid #f2f2f2;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* image caption */
+figure figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* thumbnails */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+}
+
+/* Add a CSS filter to make inactive thumbnails render in grayscale */
+ul li:not(:hover) img {
+  filter: grayscale(100%);
+}
+
+/*  Style the thumbnail border on hover */
+ul li:hover img {
+  border: 4px solid #007bff;
+  border-radius: 6px;
+}
+
+/*Center the thumbnails */
+@media (min-width: 768px) {
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+}
